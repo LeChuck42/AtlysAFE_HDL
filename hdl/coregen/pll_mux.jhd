@@ -1,0 +1,5 @@
+MODULE pll_mux DEFIN pll_mux.vhd
+	SUBMODULE EHXPLLJ
+		INSTANCE PLLInst_0
+	SUBMODULE VLO
+		INSTANCE scuba_vlo_inst

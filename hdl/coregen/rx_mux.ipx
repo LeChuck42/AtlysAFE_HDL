@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="rx_mux" module="DDR_GENERIC" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2015 10 29 19:51:20.485" version="6.0" type="Module" synthesis="lse" source_format="VHDL">
+  <Package>
+		<File name="rx_mux.lpc" type="lpc" modified="2015 10 29 19:51:17.769"/>
+		<File name="rx_mux.vhd" type="top_level_vhdl" modified="2015 10 29 19:51:17.822"/>
+		<File name="rx_mux_tmpl.vhd" type="template_vhdl" modified="2015 10 29 19:51:17.824"/>
+  </Package>
+</DiamondModule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="pll_mux" module="PLL" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2015 10 29 19:34:10.606" version="5.8" type="Module" synthesis="lse" source_format="VHDL">
+  <Package>
+		<File name="pll_mux.lpc" type="lpc" modified="2015 10 29 19:34:08.979"/>
+		<File name="pll_mux.vhd" type="top_level_vhdl" modified="2015 10 29 19:34:09.063"/>
+		<File name="pll_mux_tmpl.vhd" type="template_vhdl" modified="2015 10 29 19:34:09.065"/>
+  </Package>
+</DiamondModule>

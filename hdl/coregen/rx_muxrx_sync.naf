@@ -1,0 +1,9 @@
+rstn  i
+clk  i
+init  i
+lock  i
+uddcntln  o
+freeze  o
+rx_stop  o
+rx_reset  o
+rx_start  o

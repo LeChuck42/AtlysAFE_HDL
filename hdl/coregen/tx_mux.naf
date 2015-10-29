@@ -1,0 +1,17 @@
+clk_s  i
+clkop  i
+clkos  i
+clkout  o
+lock_chk  i
+reset  i
+sclk  o
+tx_ready  o
+dataout[7]  i
+dataout[6]  i
+dataout[5]  i
+dataout[4]  i
+dataout[3]  i
+dataout[2]  i
+dataout[1]  i
+dataout[0]  i
+dout[0]  o

@@ -1,0 +1,376 @@
+(edif tx_mux
+  (edifVersion 2 0 0)
+  (edifLevel 0)
+  (keywordMap (keywordLevel 0))
+  (status
+    (written
+      (timestamp 2015 10 29 19 51 47)
+      (program "SCUBA" (version "Diamond (64-bit) 3.6.0.83.4"))))
+      (comment "C:\lscc\diamond\3.6_x64\ispfpga\bin\nt64\scuba.exe -w -n tx_mux -lang vhdl -synth lse -bus_exp 7 -bb -arch xo2c00 -type iol -mode out -io_type LVCMOS25 -width 1 -freq_in 250 -gear 4 -clk eclk -del -1 ")
+  (library ORCLIB
+    (edifLevel 0)
+    (technology
+      (numberDefinition))
+    (cell FD1P3BX
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port D
+            (direction INPUT))
+          (port SP
+            (direction INPUT))
+          (port CK
+            (direction INPUT))
+          (port PD
+            (direction INPUT))
+          (port Q
+            (direction OUTPUT)))))
+    (cell FD1P3DX
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port D
+            (direction INPUT))
+          (port SP
+            (direction INPUT))
+          (port CK
+            (direction INPUT))
+          (port CD
+            (direction INPUT))
+          (port Q
+            (direction OUTPUT)))))
+    (cell ROM16X1A
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port AD3
+            (direction INPUT))
+          (port AD2
+            (direction INPUT))
+          (port AD1
+            (direction INPUT))
+          (port AD0
+            (direction INPUT))
+          (port DO0
+            (direction OUTPUT)))))
+    (cell VHI
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Z
+            (direction OUTPUT)))))
+    (cell VLO
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port Z
+            (direction OUTPUT)))))
+    (cell OB
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port I
+            (direction INPUT))
+          (port O
+            (direction OUTPUT)))))
+    (cell ODDRX4B
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port D0
+            (direction INPUT))
+          (port D1
+            (direction INPUT))
+          (port D2
+            (direction INPUT))
+          (port D3
+            (direction INPUT))
+          (port D4
+            (direction INPUT))
+          (port D5
+            (direction INPUT))
+          (port D6
+            (direction INPUT))
+          (port D7
+            (direction INPUT))
+          (port ECLK
+            (direction INPUT))
+          (port SCLK
+            (direction INPUT))
+          (port RST
+            (direction INPUT))
+          (port Q
+            (direction OUTPUT)))))
+    (cell CLKDIVC
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port RST
+            (direction INPUT))
+          (port CLKI
+            (direction INPUT))
+          (port ALIGNWD
+            (direction INPUT))
+          (port CDIV1
+            (direction OUTPUT))
+          (port CDIVX
+            (direction OUTPUT)))))
+    (cell ECLKSYNCA
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port ECLKI
+            (direction INPUT))
+          (port STOP
+            (direction INPUT))
+          (port ECLKO
+            (direction OUTPUT)))))
+    (cell tx_mux
+      (cellType GENERIC)
+      (view view1
+        (viewType NETLIST)
+        (interface
+          (port clk_s
+            (direction INPUT))
+          (port clkop
+            (direction INPUT))
+          (port clkos
+            (direction INPUT))
+          (port clkout
+            (direction OUTPUT))
+          (port lock_chk
+            (direction INPUT))
+          (port reset
+            (direction INPUT))
+          (port sclk
+            (direction OUTPUT))
+          (port tx_ready
+            (direction OUTPUT))
+          (port (array (rename dataout "dataout(7:0)") 8)
+            (direction INPUT))
+          (port (array (rename dout "dout(0:0)") 1)
+            (direction OUTPUT)))
+        (property NGD_DRC_MASK (integer 1))
+        (contents
+          (instance LUT4_1
+            (viewRef view1 
+              (cellRef ROM16X1A))
+            (property initval
+              (string "0x0a78")))
+          (instance LUT4_0
+            (viewRef view1 
+              (cellRef ROM16X1A))
+            (property initval
+              (string "0xfffe")))
+          (instance FF_3
+            (viewRef view1 
+              (cellRef FD1P3BX))
+            (property GSR
+              (string "ENABLED")))
+          (instance FF_2
+            (viewRef view1 
+              (cellRef FD1P3DX))
+            (property GSR
+              (string "ENABLED")))
+          (instance FF_1
+            (viewRef view1 
+              (cellRef FD1P3DX))
+            (property GSR
+              (string "ENABLED")))
+          (instance FF_0
+            (viewRef view1 
+              (cellRef FD1P3DX))
+            (property GSR
+              (string "ENABLED")))
+          (instance Inst7_OB
+            (viewRef view1 
+              (cellRef OB))
+            (property IO_TYPE
+              (string "LVCMOS25")))
+          (instance scuba_vhi_inst
+            (viewRef view1 
+              (cellRef VHI)))
+          (instance Inst6_ODDRX4B
+            (viewRef view1 
+              (cellRef ODDRX4B)))
+          (instance Inst5_ODDRX4B0
+            (viewRef view1 
+              (cellRef ODDRX4B)))
+          (instance Inst4_ECLKSYNCA
+            (viewRef view1 
+              (cellRef ECLKSYNCA)))
+          (instance scuba_vlo_inst
+            (viewRef view1 
+              (cellRef VLO)))
+          (instance Inst3_CLKDIVC
+            (viewRef view1 
+              (cellRef CLKDIVC))
+            (property DIV
+              (string "4.0")))
+          (instance Inst2_ECLKSYNCA
+            (viewRef view1 
+              (cellRef ECLKSYNCA)))
+          (instance Inst1_OB0
+            (viewRef view1 
+              (cellRef OB))
+            (property IO_TYPE
+              (string "LVCMOS25")))
+          (net opensync_0
+            (joined
+              (portRef D (instanceRef FF_2))
+              (portRef AD3 (instanceRef LUT4_1))
+              (portRef AD3 (instanceRef LUT4_0))
+              (portRef Q (instanceRef FF_3))))
+          (net opensync_1
+            (joined
+              (portRef D (instanceRef FF_1))
+              (portRef AD2 (instanceRef LUT4_0))
+              (portRef Q (instanceRef FF_2))))
+          (net opensync_cken
+            (joined
+              (portRef SP (instanceRef FF_0))
+              (portRef DO0 (instanceRef LUT4_1))
+              (portRef SP (instanceRef FF_3))
+              (portRef SP (instanceRef FF_2))
+              (portRef SP (instanceRef FF_1))))
+          (net opensync_2
+            (joined
+              (portRef D (instanceRef FF_0))
+              (portRef Q (instanceRef FF_1))))
+          (net buf_clkout
+            (joined
+              (portRef Q (instanceRef Inst6_ODDRX4B))
+              (portRef I (instanceRef Inst7_OB))))
+          (net scuba_vhi
+            (joined
+              (portRef Z (instanceRef scuba_vhi_inst))
+              (portRef AD0 (instanceRef LUT4_1))
+              (portRef D6 (instanceRef Inst6_ODDRX4B))
+              (portRef D4 (instanceRef Inst6_ODDRX4B))
+              (portRef D2 (instanceRef Inst6_ODDRX4B))
+              (portRef D0 (instanceRef Inst6_ODDRX4B))))
+          (net d70
+            (joined
+              (portRef D7 (instanceRef Inst5_ODDRX4B0))
+              (portRef (member dataout 0))))
+          (net d60
+            (joined
+              (portRef D6 (instanceRef Inst5_ODDRX4B0))
+              (portRef (member dataout 1))))
+          (net d50
+            (joined
+              (portRef D5 (instanceRef Inst5_ODDRX4B0))
+              (portRef (member dataout 2))))
+          (net d40
+            (joined
+              (portRef D4 (instanceRef Inst5_ODDRX4B0))
+              (portRef (member dataout 3))))
+          (net d30
+            (joined
+              (portRef D3 (instanceRef Inst5_ODDRX4B0))
+              (portRef (member dataout 4))))
+          (net d20
+            (joined
+              (portRef D2 (instanceRef Inst5_ODDRX4B0))
+              (portRef (member dataout 5))))
+          (net d10
+            (joined
+              (portRef D1 (instanceRef Inst5_ODDRX4B0))
+              (portRef (member dataout 6))))
+          (net d00
+            (joined
+              (portRef D0 (instanceRef Inst5_ODDRX4B0))
+              (portRef (member dataout 7))))
+          (net eclkc
+            (joined
+              (portRef ECLKO (instanceRef Inst4_ECLKSYNCA))
+              (portRef ECLK (instanceRef Inst6_ODDRX4B))))
+          (net cdiv1
+            (joined
+              (portRef CDIV1 (instanceRef Inst3_CLKDIVC))))
+          (net scuba_vlo
+            (joined
+              (portRef Z (instanceRef scuba_vlo_inst))
+              (portRef AD0 (instanceRef LUT4_0))
+              (portRef AD1 (instanceRef LUT4_0))
+              (portRef D7 (instanceRef Inst6_ODDRX4B))
+              (portRef D5 (instanceRef Inst6_ODDRX4B))
+              (portRef D3 (instanceRef Inst6_ODDRX4B))
+              (portRef D1 (instanceRef Inst6_ODDRX4B))
+              (portRef ALIGNWD (instanceRef Inst3_CLKDIVC))))
+          (net eclkd
+            (joined
+              (portRef ECLKO (instanceRef Inst2_ECLKSYNCA))
+              (portRef ECLK (instanceRef Inst5_ODDRX4B0))
+              (portRef CLKI (instanceRef Inst3_CLKDIVC))))
+          (net xstop
+            (joined
+              (portRef STOP (instanceRef Inst2_ECLKSYNCA))
+              (portRef DO0 (instanceRef LUT4_0))
+              (portRef STOP (instanceRef Inst4_ECLKSYNCA))))
+          (net buf_douto0
+            (joined
+              (portRef I (instanceRef Inst1_OB0))
+              (portRef Q (instanceRef Inst5_ODDRX4B0))))
+          (net dout0
+            (joined
+              (portRef (member dout 0))
+              (portRef O (instanceRef Inst1_OB0))))
+          (net tx_ready
+            (joined
+              (portRef tx_ready)
+              (portRef Q (instanceRef FF_0))
+              (portRef AD2 (instanceRef LUT4_1))
+              (portRef D (instanceRef FF_3))))
+          (net sclk
+            (joined
+              (portRef sclk)
+              (portRef CDIVX (instanceRef Inst3_CLKDIVC))
+              (portRef SCLK (instanceRef Inst6_ODDRX4B))
+              (portRef SCLK (instanceRef Inst5_ODDRX4B0))))
+          (net reset
+            (joined
+              (portRef reset)
+              (portRef PD (instanceRef FF_3))
+              (portRef CD (instanceRef FF_2))
+              (portRef CD (instanceRef FF_1))
+              (portRef CD (instanceRef FF_0))
+              (portRef RST (instanceRef Inst6_ODDRX4B))
+              (portRef RST (instanceRef Inst5_ODDRX4B0))
+              (portRef RST (instanceRef Inst3_CLKDIVC))))
+          (net lock_chk
+            (joined
+              (portRef lock_chk)
+              (portRef AD1 (instanceRef LUT4_1))))
+          (net clkout
+            (joined
+              (portRef clkout)
+              (portRef O (instanceRef Inst7_OB))))
+          (net clkos
+            (joined
+              (portRef clkos)
+              (portRef ECLKI (instanceRef Inst4_ECLKSYNCA))))
+          (net clkop
+            (joined
+              (portRef clkop)
+              (portRef ECLKI (instanceRef Inst2_ECLKSYNCA))))
+          (net clk_s
+            (joined
+              (portRef clk_s)
+              (portRef CK (instanceRef FF_3))
+              (portRef CK (instanceRef FF_2))
+              (portRef CK (instanceRef FF_1))
+              (portRef CK (instanceRef FF_0))))))))
+  (design tx_mux
+    (cellRef tx_mux
+      (libraryRef ORCLIB)))
+)
