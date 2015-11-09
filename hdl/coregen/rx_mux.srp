@@ -1,5 +1,5 @@
 SCUBA, Version Diamond (64-bit) 3.6.0.83.4
-Thu Oct 29 19:51:17 2015
+Tue Nov 03 19:18:27 2015
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -7,12 +7,12 @@ Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
 
-    Issued command   : C:\lscc\diamond\3.6_x64\ispfpga\bin\nt64\scuba.exe -w -n rx_mux -lang vhdl -synth lse -bus_exp 7 -bb -arch xo2c00 -type iol -mode in -io_type LVCMOS25 -width 1 -freq_in 250 -gear 4 -clk eclk -del 64 
+    Issued command   : C:\lscc\diamond\3.6_x64\ispfpga\bin\nt64\scuba.exe -w -n rx_mux -lang vhdl -synth synplify -bus_exp 7 -bb -arch xo2c00 -type iol -mode in -io_type LVDS25 -width 1 -freq_in 160 -gear 4 -clk eclk -del -1 
     Circuit name     : rx_mux
     Module type      : iol
     Module Version   : 5.8
     Ports            : 
-	Inputs       : alignwd, clk, clk_s, del[4:0], init, reset, datain[0:0]
+	Inputs       : alignwd, clk, clk_s, init, reset, datain[0:0]
 	Outputs      : rx_ready, sclk, q[7:0]
     I/O buffer       : not inserted
     EDIF output      : rx_mux.edn
@@ -27,7 +27,6 @@ Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
        ROM16X1A : 2
              IB : 2
         IDDRX4B : 1
-         DELAYD : 1
         CLKDIVC : 1
       ECLKSYNCA : 1
     Estimated Resource Usage:

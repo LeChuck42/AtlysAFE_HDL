@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DiamondModule name="tx_mux" module="DDR_GENERIC" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2015 10 29 19:51:49.290" version="6.0" type="Module" synthesis="lse" source_format="VHDL">
+<DiamondModule name="tx_mux" module="tx_mux" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2015 10 30 20:35:30.556" version="6.0" type="Module" synthesis="synplify" source_format="VHDL">
   <Package>
-		<File name="tx_mux.lpc" type="lpc" modified="2015 10 29 19:51:47.960"/>
-		<File name="tx_mux.vhd" type="top_level_vhdl" modified="2015 10 29 19:51:48.002"/>
-		<File name="tx_mux_tmpl.vhd" type="template_vhdl" modified="2015 10 29 19:51:48.004"/>
+		<File name="tx_mux.lpc" type="lpc" modified="2015 10 30 20:35:26.753"/>
+		<File name="tx_mux.vhd" type="top_level_vhdl" modified="2015 10 30 20:35:26.798"/>
+		<File name="tx_mux_tmpl.vhd" type="template_vhdl" modified="2015 10 30 20:35:26.800"/>
   </Package>
 </DiamondModule>

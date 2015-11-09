@@ -4,9 +4,9 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timestamp 2015 10 29 19 34 9)
+      (timestamp 2015 11 9 17 54 39)
       (program "SCUBA" (version "Diamond (64-bit) 3.6.0.83.4"))))
-      (comment "C:\lscc\diamond\3.6_x64\ispfpga\bin\nt64\scuba.exe -w -n pll_mux -lang vhdl -synth lse -arch xo2c00 -type pll -fin 160 -fclkop 160 -fclkop_tol 0.0 -fclkos 160 -fclkos_tol 0.0 -fclkos2 40 -fclkos2_tol 0.0 -trimp 0 -phasep 0 -trimp_r -trims 0 -phases 90 -trims_r -phases2 0 -phase_cntl STATIC -fb_mode 1 -lock ")
+      (comment "C:\lscc\diamond\3.6_x64\ispfpga\bin\nt64\scuba.exe -w -n pll_mux -lang vhdl -synth synplify -arch xo2c00 -type pll -fin 160 -fclkop 160 -fclkop_tol 0.0 -fclkos 160 -fclkos_tol 0.0 -fclkos2 40 -fclkos2_tol 0.0 -trimp 0 -phasep 0 -trimp_r -trims 0 -phases 90 -trims_r -phases2 0 -phase_cntl STATIC -fb_mode 1 -lock ")
   (library ORCLIB
     (edifLevel 0)
     (technology

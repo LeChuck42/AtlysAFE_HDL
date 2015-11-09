@@ -3,7 +3,7 @@ Starting process: Module
 Starting process: 
 
 SCUBA, Version Diamond (64-bit) 3.6.0.83.4
-Thu Oct 29 19:51:47 2015
+Fri Oct 30 20:35:26 2015
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -13,7 +13,7 @@ Copyright (c) 2002-2015 Lattice Semiconductor Corporation,  All rights reserved.
 
 BEGIN SCUBA Module Synthesis
 
-    Issued command   : C:\lscc\diamond\3.6_x64\ispfpga\bin\nt64\scuba.exe -w -n tx_mux -lang vhdl -synth lse -bus_exp 7 -bb -arch xo2c00 -type iol -mode out -io_type LVCMOS25 -width 1 -freq_in 250 -gear 4 -clk eclk -del -1 
+    Issued command   : C:\lscc\diamond\3.6_x64\ispfpga\bin\nt64\scuba.exe -w -n tx_mux -lang vhdl -synth synplify -bus_exp 7 -bb -arch xo2c00 -type iol -mode out -io_type LVCMOS25 -width 1 -freq_in 160 -gear 4 -clk eclk -del -1 
     Circuit name     : tx_mux
     Module type      : iol
     Module Version   : 5.8

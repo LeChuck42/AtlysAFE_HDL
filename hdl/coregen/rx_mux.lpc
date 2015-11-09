@@ -16,8 +16,8 @@ CoreRevision=6.0
 ModuleName=rx_mux
 SourceFormat=VHDL
 ParameterFileVersion=1.0
-Date=10/29/2015
-Time=19:51:17
+Date=11/03/2015
+Time=19:18:27
 
 [Parameters]
 Verilog=0
@@ -29,28 +29,28 @@ Order=Big Endian [MSB:LSB]
 IO=0
 mode=Receive
 trioddr=0
-highspeed=
-io_type=LVCMOS25
+highspeed=0
+io_type=LVDS25
 num_int=2
 width=1
 freq_in=160
-bandwidth=500
+bandwidth=320
 aligned=Centered
 pre-configuration=DISABLED
 mode2=Receive
 trioddr2=0
 highspeed2=0
-io_type2=LVCMOS25
-freq_in2=250
+io_type2=LVDS25
+freq_in2=160
 gear=4x
 aligned2=Centered
 num_int2=2
 width2=1
 Interface=GDDRX4_RX.ECLK.Centered
-Delay=Dynamic
+Delay=Bypass
 DelVal=
 UsePll=
 GenPll=0
 
 [Command]
-cmd_line= -w -n rx_mux -lang vhdl -synth lse -bus_exp 7 -bb -arch xo2c00 -type iol -mode in -io_type LVCMOS25 -width 1 -freq_in 250 -gear 4 -clk eclk -del 64
+cmd_line= -w -n rx_mux -lang vhdl -synth synplify -bus_exp 7 -bb -arch xo2c00 -type iol -mode in -io_type LVDS25 -width 1 -freq_in 160 -gear 4 -clk eclk -del -1

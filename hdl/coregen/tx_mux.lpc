@@ -16,8 +16,8 @@ CoreRevision=6.0
 ModuleName=tx_mux
 SourceFormat=VHDL
 ParameterFileVersion=1.0
-Date=10/29/2015
-Time=19:51:47
+Date=10/30/2015
+Time=20:35:26
 
 [Parameters]
 Verilog=0
@@ -29,10 +29,10 @@ Order=Big Endian [MSB:LSB]
 IO=0
 mode=Transmit
 trioddr=0
-highspeed=
+highspeed=0
 io_type=LVCMOS25
 num_int=
-width=8
+width=1
 freq_in=160
 bandwidth=
 aligned=Centered
@@ -41,7 +41,7 @@ mode2=Transmit
 trioddr2=0
 highspeed2=0
 io_type2=LVCMOS25
-freq_in2=250
+freq_in2=160
 gear=4x
 aligned2=Centered
 num_int2=1
@@ -53,4 +53,4 @@ UsePll=
 GenPll=0
 
 [Command]
-cmd_line= -w -n tx_mux -lang vhdl -synth lse -bus_exp 7 -bb -arch xo2c00 -type iol -mode out -io_type LVCMOS25 -width 1 -freq_in 250 -gear 4 -clk eclk -del -1
+cmd_line= -w -n tx_mux -lang vhdl -synth synplify -bus_exp 7 -bb -arch xo2c00 -type iol -mode out -io_type LVCMOS25 -width 1 -freq_in 160 -gear 4 -clk eclk -del -1

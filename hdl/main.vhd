@@ -2,6 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+library MACHXO2;
+use MACHXO2.components.all;
+
 entity main is
 	port (
 		CLK_FPGA:       in  std_logic;
@@ -71,17 +74,20 @@ architecture rtl of main is
 
 component pll_mux
 	port (CLKI: in  std_logic; CLKOP: out  std_logic; 
-	CLKOS: out  std_logic; CLKOS2: out std_logic;
-	LOCK: out  std_logic);
+	CLKOS: out  std_logic; CLKOS2: out std_logic; LOCK: out  std_logic);
 end component;
 
 component rx_mux
-	port (alignwd: in  std_logic; clk: in  std_logic; 
-		clk_s: in  std_logic; del: in  std_logic_vector(4 downto 0); 
-		init: in  std_logic; reset: in  std_logic; 
-		rx_ready: out  std_logic; sclk: out  std_logic; 
-		datain: in  std_logic_vector(0 downto 0); 
-		q: out  std_logic_vector(7 downto 0));
+    port (
+        alignwd: in  std_logic; 
+        clk: in  std_logic; 
+        clk_s: in  std_logic; 
+        init: in  std_logic; 
+        reset: in  std_logic; 
+        rx_ready: out  std_logic; 
+        sclk: out  std_logic; 
+        datain: in  std_logic_vector(0 downto 0); 
+        q: out  std_logic_vector(7 downto 0));
 end component;
 
 component tx_mux
@@ -92,6 +98,15 @@ component tx_mux
 		dataout: in  std_logic_vector(7 downto 0); 
 		dout: out  std_logic_vector(0 downto 0));
 end component;
+
+COMPONENT OSCH
+	-- synthesis translate_off
+	 GENERIC (NOM_FREQ: string := "2.56");
+	-- synthesis translate_on
+	 PORT ( STDBY :IN std_logic;
+		OSC :OUT std_logic;
+		SEDSTDBY :OUT std_logic);
+END COMPONENT; 
 
 component spi_register
 	generic (
@@ -129,7 +144,6 @@ signal rx_mux_init: std_logic;
 signal rx_mux_rx_ready: std_logic;
 signal rx_mux_sclk: std_logic;
 signal rx_mux_datain: std_logic_vector(0 downto 0);
-signal rx_mux_delay: std_logic_vector(4 downto 0);
 
 
 signal tx_mux_d: std_logic_vector(7 downto 0);
@@ -145,31 +159,39 @@ signal tx_mux_dout: std_logic_vector(0 downto 0);
 
 signal mux_reset: std_logic;
 signal reset, reset_buf, reset_async: std_logic;
+signal reset_tx, reset_tx_buf: std_logic;
 signal sync_delay: std_logic;
 signal clk_fpga_int: std_logic;
 signal sync_mon_valid, sync_mon_expect, sync_mon_out: std_logic;
+signal osc_int: std_logic;
 begin
 	--pll_main_inst : pll_main
 	--  port map (CLKI=>CLK_FPGA, CLKOP=>clk, LOCK=>pll_lock);
-	
-	DAC_REFCLK <= CLK_FPGA;
+	OSCInst0: OSCH
+		-- synthesis translate_off
+		GENERIC MAP ( NOM_FREQ => "2.56" )
+		-- synthesis translate_on
+		PORT MAP (
+			STDBY    => '0',
+			OSC      => osc_int,
+			SEDSTDBY => open); 
+	DAC_REFCLK <= CLK_FPGA when mux_synced = '1' else '0';
 	
 	rx_mux_datain(0) <= MUX_IN;
 	MUX_OUT <= tx_mux_dout(0);
 	
-	rx_mux_delay <= (others => '0');
-	
 	pll_mux_inst : pll_mux
-		port map (CLKI=>MUX_CLK, CLKOP=>tx_mux_clkop, CLKOS=>tx_mux_clkos, CLKOS2=>clk_fpga_int, LOCK=>tx_mux_lock_chk);
+		port map (CLKI=>MUX_CLK, CLKOP=>tx_mux_clkop, CLKOS=>tx_mux_clkos, CLKOS2=>open, LOCK=>tx_mux_lock_chk);
 
-	tx_mux_clk_s <= clk_fpga_int;
-	rx_mux_clk_s <= clk_fpga_int;
+	tx_mux_clk_s <= osc_int;
+	rx_mux_clk_s <= osc_int;
 	mux_reset <= not tx_mux_lock_chk;
-	rx_mux_init <= not mux_reset;
+	rx_mux_init <= mux_reset;
 	
+	clk_fpga_int <= rx_mux_sclk;
 	
 	rx_mux_inst: rx_mux
-	port map (alignwd=>rx_mux_alignwd, clk=>MUX_CLK, clk_s=>rx_mux_clk_s, del(4 downto 0)=>rx_mux_delay, init=>rx_mux_init, reset=>mux_reset,
+	port map (alignwd=>rx_mux_alignwd, clk=>tx_mux_clkop, clk_s=>rx_mux_clk_s, init=>'1', reset=>reset_async,
 		rx_ready=>rx_mux_rx_ready, sclk=>rx_mux_sclk, datain(0 downto 0)=>rx_mux_datain, q(7 downto 0)=>rx_mux_q);
 
 	tx_mux_inst: tx_mux
@@ -179,7 +201,7 @@ begin
 	spi_reg_inst: spi_register
 		generic map ( BITS => 16)
 		port map(
-			reset => mux_reset,
+			reset => reset,
 			spi_cs => spi_cs_fpga,
 			spi_clk => spi_clk,
 			spi_mosi => spi_mosi,
@@ -190,20 +212,31 @@ begin
 	
 	reset_async <= not FPGA_PGOOD;
 	
-	reset_sync_proc: process(reset_async, rx_mux_sclk)
+	reset_sync_proc: process(reset_async, tx_mux_lock_chk, clk_fpga_int)
 	begin
-		if reset_async = '1' then
+		if reset_async = '1' or tx_mux_lock_chk = '0' then
 			reset <= '1';
 			reset_buf <= '1';
-		elsif rising_edge(rx_mux_sclk) then
+		elsif rising_edge(clk_fpga_int) then
 			reset <= reset_buf;
 			reset_buf <= '0';
 		end if;
 	end process;
 	
-	mux_sync_func: process(mux_reset, rx_mux_sclk)
+	tx_reset_sync_proc: process (reset_async, tx_mux_lock_chk, tx_mux_sclk)
 	begin
-		if mux_reset = '1' then
+		if reset_async = '1' or tx_mux_lock_chk = '0' then
+			reset_tx <= '1';
+			reset_tx_buf <= '1';
+		elsif rising_edge(tx_mux_sclk) then
+			reset_tx <= reset_tx_buf;
+			reset_tx_buf <= '0';
+		end if;
+	end process;
+	
+	mux_sync_func: process(reset, clk_fpga_int)
+	begin
+		if reset = '1' then
 			rx_mux_alignwd <= '0';
 			mux_synced <= '0';
 			sync_pattern <= x"01";
@@ -211,7 +244,7 @@ begin
 			sync_mon_out <= '0';
 			sync_mon_valid <= '0';
 			sync_mon_expect <= '0';
-		elsif rising_edge(rx_mux_sclk) then
+		elsif rising_edge(clk_fpga_int) then
 			sync_delay <= rx_mux_alignwd;
 			rx_mux_alignwd <= '0';
 			sync_mon_out <= not sync_mon_out;
@@ -249,7 +282,19 @@ begin
 		end if;
 	end process;
 	
-	tx_mux_d <= tx_mux_reg when mux_synced = '1' else sync_pattern;
+	tx_sync: process(reset_tx, tx_mux_sclk)
+	begin
+		if reset_tx = '1' then
+			tx_mux_d <= (others => '0');
+		elsif rising_edge(tx_mux_sclk) then
+			if mux_synced = '1' then
+				tx_mux_d <= tx_mux_reg;
+			else
+				tx_mux_d <= sync_pattern;
+			end if;
+		end if;
+	end process;
+	
 	rx_mux_out <= rx_mux_q when mux_synced = '1' and sync_mon_valid = '1' else "00011111";
 	
 	spi_cs_fpga <= rx_mux_out(4);
@@ -305,10 +350,11 @@ begin
 	SIO_CTSn <= 'Z';
 	SIO_DSRn <= 'Z';
 	SIO_DCDn <= 'Z';
-	GPIO <= rx_mux_out(6 downto 0) & rx_mux_alignwd & mux_synced & sync_delay & sync_mon_out & sync_mon_valid & spi_miso & tx_mux_lock_chk;
+	GPIO <= rx_mux_q(7 downto 0) & rx_mux_alignwd & mux_synced & sync_delay & sync_mon_out & sync_mon_valid & "0";
+	--GPIO <= rx_mux_sclk & tx_mux_lock_chk & osc_int & reset_async & rx_mux_init & rx_mux_rx_ready & "0"&  rx_mux_alignwd & mux_synced & sync_delay & sync_mon_out & sync_mon_valid & spi_miso & tx_mux_lock_chk;
 	LED(0) <= mux_synced;
 	LED(1) <= spi_reg(13);
-	LED(2) <= spi_reg(14);
+	LED(2) <= tx_mux_lock_chk;
 	LED(3) <= spi_reg(15);
 end architecture rtl;
 		
