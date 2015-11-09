@@ -2,7 +2,7 @@
 <BaliProject version="3.2" title="AtlysAFE" device="LCMXO2-2000HC-4TG100C" default_implementation="impl">
     <Options/>
     <Implementation title="impl" dir="impl" description="impl" synthesis="synplify" default_strategy="Strategy1">
-        <Options def_top="main"/>
+        <Options def_top="main" top="main"/>
         <Source name="hdl/main.vhd" type="VHDL" type_short="VHDL">
             <Options top_module="main"/>
         </Source>

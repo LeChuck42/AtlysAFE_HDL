@@ -1,0 +1,815 @@
+<HTML>
+<HEAD><TITLE>Synthesis Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis Report</big></U></B>
+#Build: Synplify Pro J-2015.03L-SP1, Build 123R, Aug 18 2015
+#install: C:\lscc\diamond\3.6_x64\synpbase
+#OS: Windows 8 6.2
+#Hostname: LECHUCKLT
+
+#Implementation: impl
+
+Synopsys HDL Compiler, version comp201503sp1p1, Build 117R, built Aug 18 2015
+@N|Running in 64-bit mode
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+Synopsys VHDL Compiler, version comp201503sp1p1, Build 117R, built Aug 18 2015
+@N|Running in 64-bit mode
+Copyright (C) 1994-2015 Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+
+@N: CD720 :"C:\lscc\diamond\3.6_x64\synpbase\lib\vhd\std.vhd":123:18:123:21|Setting time resolution to ns
+@N:"D:\FPGA\AtlysAFE\hdl\main.vhd":8:7:8:10|Top entity is set to main.
+File D:\FPGA\AtlysAFE\hdl\main.vhd changed - recompiling
+File C:\lscc\diamond\3.6_x64\synpbase\lib\lucent\machxo2.vhd changed - recompiling
+VHDL syntax check successful!
+File D:\FPGA\AtlysAFE\hdl\main.vhd changed - recompiling
+@N: CD630 :"D:\FPGA\AtlysAFE\hdl\main.vhd":8:7:8:10|Synthesizing work.main.rtl 
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":2291:10:2291:13|Synthesizing work.osch.syn_black_box 
+Post processing for work.osch.syn_black_box
+@N: CD630 :"D:\FPGA\AtlysAFE\hdl\spi_register.vhd":5:7:5:18|Synthesizing work.spi_register.rtl 
+Post processing for work.spi_register.rtl
+@N: CD630 :"D:\FPGA\AtlysAFE\hdl\coregen\tx_mux.vhd":14:7:14:12|Synthesizing work.tx_mux.structure 
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":1407:10:1407:17|Synthesizing work.rom16x1a.syn_black_box 
+Post processing for work.rom16x1a.syn_black_box
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":222:10:222:16|Synthesizing work.fd1p3bx.syn_black_box 
+Post processing for work.fd1p3bx.syn_black_box
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":234:10:234:16|Synthesizing work.fd1p3dx.syn_black_box 
+Post processing for work.fd1p3dx.syn_black_box
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":2052:10:2052:16|Synthesizing work.oddrx4b.syn_black_box 
+Post processing for work.oddrx4b.syn_black_box
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":1904:10:1904:16|Synthesizing work.clkdivc.syn_black_box 
+Post processing for work.clkdivc.syn_black_box
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":1182:10:1182:11|Synthesizing work.ob.syn_black_box 
+Post processing for work.ob.syn_black_box
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":1924:10:1924:18|Synthesizing work.eclksynca.syn_black_box 
+Post processing for work.eclksynca.syn_black_box
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":1490:10:1490:12|Synthesizing work.vlo.syn_black_box 
+Post processing for work.vlo.syn_black_box
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":1483:10:1483:12|Synthesizing work.vhi.syn_black_box 
+Post processing for work.vhi.syn_black_box
+Post processing for work.tx_mux.structure
+@N: CD630 :"D:\FPGA\AtlysAFE\hdl\coregen\rx_mux.vhd":14:7:14:12|Synthesizing work.rx_mux.structure 
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":2007:10:2007:16|Synthesizing work.iddrx4b.syn_black_box 
+Post processing for work.iddrx4b.syn_black_box
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":599:10:599:11|Synthesizing work.ib.syn_black_box 
+Post processing for work.ib.syn_black_box
+Post processing for work.rx_mux.structure
+@N: CD630 :"D:\FPGA\AtlysAFE\hdl\coregen\pll_mux.vhd":14:7:14:13|Synthesizing work.pll_mux.structure 
+@N: CD630 :"C:\lscc\diamond\3.6_x64\cae_library\synthesis\vhdl\machxo2.vhd":2221:10:2221:16|Synthesizing work.ehxpllj.syn_black_box 
+Post processing for work.ehxpllj.syn_black_box
+Post processing for work.pll_mux.structure
+Post processing for work.main.rtl
+@W: CL169 :"D:\FPGA\AtlysAFE\hdl\main.vhd":287:2:287:3|Pruning register tx_mux_d_cl_5(0)  
+@W: CL246 :"D:\FPGA\AtlysAFE\hdl\main.vhd":70:2:70:5|Input port bits 5 to 0 of gpio(13 downto 0) are unused 
+@W: CL159 :"D:\FPGA\AtlysAFE\hdl\main.vhd":60:2:60:7|Input SIO_RX is unused
+@W: CL159 :"D:\FPGA\AtlysAFE\hdl\main.vhd":62:2:62:9|Input SIO_RTSn is unused
+@W: CL159 :"D:\FPGA\AtlysAFE\hdl\main.vhd":64:2:64:9|Input SIO_DTRn is unused
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 72MB peak: 74MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Nov 09 18:04:04 2015
+
+###########################################################]
+Inconsistency encountered while reading the file dependency file: D:\FPGA\AtlysAFE\impl\synwork\layer0.fdep; problem reading the design unit mappings
+Synopsys Netlist Linker, version comp201503sp1p1, Build 117R, built Aug 18 2015
+@N|Running in 64-bit mode
+File D:\FPGA\AtlysAFE\impl\synwork\layer0.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Nov 09 18:04:04 2015
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Nov 09 18:04:04 2015
+
+###########################################################]
+Synopsys Netlist Linker, version comp201503sp1p1, Build 117R, built Aug 18 2015
+@N|Running in 64-bit mode
+File D:\FPGA\AtlysAFE\impl\synwork\AtlysAFE_impl_comp.srs changed - recompiling
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Nov 09 18:04:05 2015
+
+###########################################################]
+Pre-mapping Report
+
+Synopsys Lattice Technology Pre-mapping, Version maplat, Build 1264R, Built Aug 18 2015 10:39:57
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03L-SP1
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@L: D:\FPGA\AtlysAFE\impl\AtlysAFE_impl_scck.rpt 
+Printing clock  summary report in "D:\FPGA\AtlysAFE\impl\AtlysAFE_impl_scck.rpt" file 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 102MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 112MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 114MB)
+
+@W: MT462 :"d:\fpga\atlysafe\hdl\main.vhd":298:12:298:13|Net DAC_SPI_CS appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\fpga\atlysafe\hdl\main.vhd":298:12:298:13|Net rx_mux_out[4] appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\fpga\atlysafe\hdl\main.vhd":298:12:298:13|Net rx_mux_out[6] appears to be an unidentified clock source. Assuming default frequency. 
+@N: BN114 :"d:\fpga\atlysafe\hdl\coregen\tx_mux.vhd":151:4:151:18|Removing instance Inst4_ECLKSYNCA of black_box view:work.ECLKSYNCA(syn_black_box) because there are no references to its outputs 
+@N: BN114 :"d:\fpga\atlysafe\hdl\coregen\tx_mux.vhd":140:4:140:16|Removing instance Inst6_ODDRX4B of black_box view:work.ODDRX4B(syn_black_box) because there are no references to its outputs 
+ICG Latch Removal Summary:
+Number of ICG latches removed:	0
+Number of ICG latches not removed:	0
+syn_allowed_resources : blockrams=8  set on top level netlist main
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+
+
+@S |Clock Summary
+*****************
+
+Start                           Requested     Requested     Clock        Clock              
+Clock                           Frequency     Period        Type         Group              
+--------------------------------------------------------------------------------------------
+System                          1.0 MHz       1000.000      system       system_clkgroup    
+main|osc_int_inferred_clock     2.1 MHz       480.769       inferred     Inferred_clkgroup_2
+rx_mux|sclk_inferred_clock      1.0 MHz       1000.000      inferred     Inferred_clkgroup_1
+tx_mux|sclk_inferred_clock      1.0 MHz       1000.000      inferred     Inferred_clkgroup_0
+============================================================================================
+
+@W: MT531 :"d:\fpga\atlysafe\hdl\spi_register.vhd":31:2:31:3|Found signal identified as System clock which controls 34 sequential elements including spi_reg_inst.spi_miso.  Using this clock, which has no specified timing constraint, can prevent conversion of gated or generated clocks and can adversely impact design performance. 
+@W: MT529 :"d:\fpga\atlysafe\hdl\main.vhd":287:2:287:3|Found inferred clock tx_mux|sclk_inferred_clock which controls 11 sequential elements including tx_mux_d[0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\fpga\atlysafe\hdl\main.vhd":239:2:239:3|Found inferred clock rx_mux|sclk_inferred_clock which controls 16 sequential elements including sync_mon_expect. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\fpga\atlysafe\hdl\coregen\rx_mux.vhd":120:4:120:7|Found inferred clock main|osc_int_inferred_clock which controls 0 sequential elements including rx_mux_inst.FF_3. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 76MB peak: 140MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Nov 09 18:04:06 2015
+
+###########################################################]
+Map & Optimize Report
+
+Synopsys Lattice Technology Mapper, Version maplat, Build 1264R, Built Aug 18 2015 10:39:57
+Copyright (C) 1994-2015, Synopsys, Inc. This software and the associated documentation are proprietary to Synopsys, Inc. This software may only be used in accordance with the terms and conditions of a written license agreement with Synopsys, Inc.  All other use, reproduction, or distribution of this software is strictly prohibited.
+Product Version J-2015.03L-SP1
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 99MB peak: 99MB)
+
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled 
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 100MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 111MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 111MB peak: 113MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+@W: MO111 :"d:\fpga\atlysafe\hdl\main.vhd":211:55:211:57|Tristate driver SIO_DCDn_1 on net SIO_DCDn has its enable tied to GND (module main) 
+@W: MO111 :"d:\fpga\atlysafe\hdl\main.vhd":211:55:211:57|Tristate driver SIO_DSRn_1 on net SIO_DSRn has its enable tied to GND (module main) 
+@W: MO111 :"d:\fpga\atlysafe\hdl\main.vhd":211:55:211:57|Tristate driver SIO_CTSn_1 on net SIO_CTSn has its enable tied to GND (module main) 
+@W: MO111 :"d:\fpga\atlysafe\hdl\main.vhd":211:55:211:57|Tristate driver SIO_TX_1 on net SIO_TX has its enable tied to GND (module main) 
+@W: MO111 :"d:\fpga\atlysafe\hdl\main.vhd":211:55:211:57|Tristate driver CLK_SYNC_1 on net CLK_SYNC has its enable tied to GND (module main) 
+@W: MO111 :"d:\fpga\atlysafe\hdl\main.vhd":211:55:211:57|Tristate driver CLK_REFSEL_1 on net CLK_REFSEL has its enable tied to GND (module main) 
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@W: MT462 :"d:\fpga\atlysafe\hdl\main.vhd":298:12:298:13|Net rx_mux_out[4] appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\fpga\atlysafe\hdl\main.vhd":298:12:298:13|Net rx_mux_out[6] appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\fpga\atlysafe\hdl\main.vhd":298:12:298:13|Net DAC_SPI_CS appears to be an unidentified clock source. Assuming default frequency. 
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+@W: BN132 :"d:\fpga\atlysafe\hdl\main.vhd":239:2:239:3|Removing instance sync_pattern[6],  because it is equivalent to instance sync_pattern[5]
+@W: BN132 :"d:\fpga\atlysafe\hdl\main.vhd":239:2:239:3|Removing instance sync_pattern[5],  because it is equivalent to instance sync_pattern[4]
+@W: BN132 :"d:\fpga\atlysafe\hdl\main.vhd":239:2:239:3|Removing instance sync_pattern[4],  because it is equivalent to instance sync_pattern[3]
+@W: BN132 :"d:\fpga\atlysafe\hdl\main.vhd":239:2:239:3|Removing instance sync_pattern[3],  because it is equivalent to instance sync_pattern[2]
+@W: BN132 :"d:\fpga\atlysafe\hdl\main.vhd":239:2:239:3|Removing instance sync_pattern[2],  because it is equivalent to instance sync_pattern[1]
+@W: BN132 :"d:\fpga\atlysafe\hdl\main.vhd":287:2:287:3|Removing sequential instance tx_mux_d[5],  because it is equivalent to instance tx_mux_d[3]
+@W: BN132 :"d:\fpga\atlysafe\hdl\main.vhd":287:2:287:3|Removing sequential instance tx_mux_d[6],  because it is equivalent to instance tx_mux_d[3]
+@W: BN132 :"d:\fpga\atlysafe\hdl\main.vhd":287:2:287:3|Removing sequential instance tx_mux_d[4],  because it is equivalent to instance tx_mux_d[3]
+@W: BN132 :"d:\fpga\atlysafe\hdl\main.vhd":287:2:287:3|Removing sequential instance tx_mux_d[3],  because it is equivalent to instance tx_mux_d[2]
+@N: BN362 :"d:\fpga\atlysafe\hdl\spi_register.vhd":26:7:26:8|Removing sequential instance spi_reg_inst.reg_out[14] of view:PrimLib.lat(prim) in hierarchy view:work.main(rtl) because there are no references to its outputs 
+@N: BN362 :"d:\fpga\atlysafe\hdl\spi_register.vhd":26:7:26:8|Removing sequential instance spi_reg_inst.reg_out[12] of view:PrimLib.lat(prim) in hierarchy view:work.main(rtl) because there are no references to its outputs 
+@N: BN362 :"d:\fpga\atlysafe\hdl\spi_register.vhd":26:7:26:8|Removing sequential instance spi_reg_inst.reg_out[11] of view:PrimLib.lat(prim) in hierarchy view:work.main(rtl) because there are no references to its outputs 
+@N: BN362 :"d:\fpga\atlysafe\hdl\spi_register.vhd":26:7:26:8|Removing sequential instance spi_reg_inst.reg_out[10] of view:PrimLib.lat(prim) in hierarchy view:work.main(rtl) because there are no references to its outputs 
+@N: BN362 :"d:\fpga\atlysafe\hdl\spi_register.vhd":26:7:26:8|Removing sequential instance spi_reg_inst.reg_out[9] of view:PrimLib.lat(prim) in hierarchy view:work.main(rtl) because there are no references to its outputs 
+@N: BN362 :"d:\fpga\atlysafe\hdl\spi_register.vhd":26:7:26:8|Removing sequential instance spi_reg_inst.reg_out[8] of view:PrimLib.lat(prim) in hierarchy view:work.main(rtl) because there are no references to its outputs 
+@N: BN362 :"d:\fpga\atlysafe\hdl\main.vhd":239:2:239:3|Removing sequential instance sync_pattern[1] in hierarchy view:work.main(rtl) because there are no references to its outputs 
+@A: BN291 :"d:\fpga\atlysafe\hdl\main.vhd":239:2:239:3|Boundary register sync_pattern[1] packed into a complex cell. To disable register packing, set syn_keep=1 on net between register and complex cell. 
+@N: BN362 :"d:\fpga\atlysafe\hdl\main.vhd":287:2:287:3|Removing sequential instance tx_mux_d[2] in hierarchy view:work.main(rtl) because there are no references to its outputs 
+@A: BN291 :"d:\fpga\atlysafe\hdl\main.vhd":287:2:287:3|Boundary register tx_mux_d[2] packed into a complex cell. To disable register packing, set syn_keep=1 on net between register and complex cell. 
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 140MB)
+
+
+Finished gated-clock and generated-clock conversion (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 140MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 139MB peak: 140MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:00s		   478.00ns		  41 /        33
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+@N: BN362 :"d:\fpga\atlysafe\hdl\main.vhd":239:2:239:3|Removing sequential instance sync_pattern[0] in hierarchy view:work.main(rtl) because there are no references to its outputs 
+@A: BN291 :"d:\fpga\atlysafe\hdl\main.vhd":239:2:239:3|Boundary register sync_pattern[0] packed into a complex cell. To disable register packing, set syn_keep=1 on net between register and complex cell. 
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@W: MO111 :"d:\fpga\atlysafe\hdl\main.vhd":13:2:13:11|Tristate driver CLK_REFSEL_obuft.un1[0] on net CLK_REFSEL has its enable tied to GND (module main) 
+@W: MO111 :"d:\fpga\atlysafe\hdl\main.vhd":15:2:15:9|Tristate driver CLK_SYNC_obuft.un1[0] on net CLK_SYNC has its enable tied to GND (module main) 
+@W: MO111 :"d:\fpga\atlysafe\hdl\main.vhd":61:2:61:7|Tristate driver SIO_TX_obuft.un1[0] on net SIO_TX has its enable tied to GND (module main) 
+@W: MO111 :"d:\fpga\atlysafe\hdl\main.vhd":63:2:63:9|Tristate driver SIO_CTSn_obuft.un1[0] on net SIO_CTSn has its enable tied to GND (module main) 
+@W: MO111 :"d:\fpga\atlysafe\hdl\main.vhd":65:2:65:9|Tristate driver SIO_DSRn_obuft.un1[0] on net SIO_DSRn has its enable tied to GND (module main) 
+@W: MO111 :"d:\fpga\atlysafe\hdl\main.vhd":66:2:66:9|Tristate driver SIO_DCDn_obuft.un1[0] on net SIO_DCDn has its enable tied to GND (module main) 
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+
+
+#### START OF CLOCK OPTIMIZATION REPORT #####[
+
+1 non-gated/non-generated clock tree(s) driving 8 clock pin(s) of sequential element(s)
+5 gated/generated clock tree(s) driving 43 clock pin(s) of sequential element(s)
+0 instances converted, 43 sequential instances remain driven by gated/generated clocks
+
+============================ Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance 
+----------------------------------------------------------------------------------------
+@K:CKID0006       OSCInst0            OSCH                   8          tx_mux_inst.FF_0
+========================================================================================
+================================================================================ Gated/Generated Clocks =================================================================================
+Clock Tree ID     Driving Element                          Drive Element Type     Fanout     Sample Instance                Explanation                                                  
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@K:CKID0001       rx_mux_inst.Inst4_CLKDIVC                CLKDIVC                9          mux_synced                     No gated clock conversion method for cell cell:LUCENT.FD1S3DX
+@K:CKID0002       tx_mux_inst.Inst3_CLKDIVC                CLKDIVC                6          reset_tx                       No gated clock conversion method for cell cell:LUCENT.FD1S3BX
+@K:CKID0003       rx_mux_inst.Inst5_IDDRX4B0_RNIMLFH_1     ORCALUT4               17         spi_reg_inst.shift_reg[15]     No gated clock conversion method for cell cell:LUCENT.FD1P3DX
+@K:CKID0004       rx_mux_inst.Inst5_IDDRX4B0_RNIMLFH       ORCALUT4               10         spi_reg_inst.reg_out[0]        No clocks found on inputs                                    
+@K:CKID0005       DAC_SPI_CLK_RNO                          ORCALUT4               1          DAC_SPI_CLK                    No clocks found on inputs                                    
+=========================================================================================================================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######]
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 106MB peak: 140MB)
+
+Writing Analyst data base D:\FPGA\AtlysAFE\impl\synwork\AtlysAFE_impl_m.srm
+@W: MT462 :"d:\fpga\atlysafe\hdl\main.vhd":346:13:346:14|Net DAC_SPI_CS_i_0 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\fpga\atlysafe\hdl\spi_register.vhd":31:2:31:3|Net rx_mux_inst.N_23_i appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :|Net rx_mux_inst.rx_mux_out_i_0[4] appears to be an unidentified clock source. Assuming default frequency. 
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+Writing EDIF Netlist and constraint files
+@W: MT462 :"d:\fpga\atlysafe\hdl\main.vhd":346:13:346:14|Net DAC_SPI_CS_i_0 appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :"d:\fpga\atlysafe\hdl\spi_register.vhd":31:2:31:3|Net rx_mux_inst.N_23_i appears to be an unidentified clock source. Assuming default frequency. 
+@W: MT462 :|Net rx_mux_inst.rx_mux_out_i_0[4] appears to be an unidentified clock source. Assuming default frequency. 
+J-2015.03L-SP1
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+@W: MT246 :"d:\fpga\atlysafe\hdl\coregen\tx_mux.vhd":162:4:162:18|Blackbox ECLKSYNCA is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT246 :"d:\fpga\atlysafe\hdl\coregen\tx_mux.vhd":157:4:157:16|Blackbox CLKDIVC is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT246 :"d:\fpga\atlysafe\hdl\coregen\tx_mux.vhd":146:4:146:17|Blackbox ODDRX4B is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT246 :"d:\fpga\atlysafe\hdl\coregen\rx_mux.vhd":136:4:136:17|Blackbox IDDRX4B is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT246 :"d:\fpga\atlysafe\hdl\coregen\pll_mux.vhd":112:4:112:12|Blackbox EHXPLLJ is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results) 
+@W: MT420 |Found inferred clock main|osc_int_inferred_clock with period 480.77ns. Please declare a user-defined clock on object "n:osc_int"
+
+@W: MT420 |Found inferred clock tx_mux|sclk_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:tx_mux_inst.sclk"
+
+@W: MT420 |Found inferred clock rx_mux|sclk_inferred_clock with period 1000.00ns. Please declare a user-defined clock on object "n:rx_mux_inst.sclk"
+
+
+
+@S |##### START OF TIMING REPORT #####[
+# Timing Report written on Mon Nov 09 18:04:07 2015
+#
+
+
+Top view:               main
+Requested Frequency:    1.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |Timing report estimates place and route data. Please look at the place and route timing report for final timing.
+
+@N: MT322 |Clock constraints cover only FF-to-FF paths associated with the clock.
+
+
+
+Performance Summary 
+*******************
+
+
+Worst slack in design: 477.997
+
+                                Requested     Estimated     Requested     Estimated                 Clock        Clock              
+Starting Clock                  Frequency     Frequency     Period        Period        Slack       Type         Group              
+------------------------------------------------------------------------------------------------------------------------------------
+main|osc_int_inferred_clock     2.1 MHz       360.7 MHz     480.769       2.772         477.997     inferred     Inferred_clkgroup_2
+rx_mux|sclk_inferred_clock      1.0 MHz       353.5 MHz     1000.000      2.829         997.171     inferred     Inferred_clkgroup_1
+tx_mux|sclk_inferred_clock      1.0 MHz       928.2 MHz     1000.000      1.077         998.923     inferred     Inferred_clkgroup_0
+System                          1.0 MHz       870.0 MHz     1000.000      1.149         998.851     system       system_clkgroup    
+====================================================================================================================================
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                    |    rise  to  rise     |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                     Ending                       |  constraint  slack    |  constraint  slack  |  constraint  slack  |  constraint  slack
+--------------------------------------------------------------------------------------------------------------------------------------------------
+System                       System                       |  1000.000    998.851  |  No paths    -      |  No paths    -      |  No paths    -    
+System                       tx_mux|sclk_inferred_clock   |  1000.000    997.438  |  No paths    -      |  No paths    -      |  No paths    -    
+System                       rx_mux|sclk_inferred_clock   |  1000.000    997.302  |  No paths    -      |  No paths    -      |  No paths    -    
+System                       main|osc_int_inferred_clock  |  480.769     479.105  |  No paths    -      |  No paths    -      |  No paths    -    
+tx_mux|sclk_inferred_clock   System                       |  1000.000    998.011  |  No paths    -      |  No paths    -      |  No paths    -    
+tx_mux|sclk_inferred_clock   tx_mux|sclk_inferred_clock   |  1000.000    998.923  |  No paths    -      |  No paths    -      |  No paths    -    
+rx_mux|sclk_inferred_clock   System                       |  1000.000    997.796  |  No paths    -      |  No paths    -      |  No paths    -    
+rx_mux|sclk_inferred_clock   tx_mux|sclk_inferred_clock   |  Diff grp    -        |  No paths    -      |  No paths    -      |  No paths    -    
+rx_mux|sclk_inferred_clock   rx_mux|sclk_inferred_clock   |  1000.000    997.171  |  No paths    -      |  No paths    -      |  No paths    -    
+main|osc_int_inferred_clock  System                       |  480.769     478.645  |  No paths    -      |  No paths    -      |  No paths    -    
+main|osc_int_inferred_clock  main|osc_int_inferred_clock  |  480.769     477.997  |  No paths    -      |  No paths    -      |  No paths    -    
+==================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: main|osc_int_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                     Starting                                                           Arrival            
+Instance             Reference                       Type        Pin     Net            Time        Slack  
+                     Clock                                                                                 
+-----------------------------------------------------------------------------------------------------------
+tx_mux_inst.FF_3     main|osc_int_inferred_clock     FD1P3BX     Q       opensync_0     1.108       477.997
+rx_mux_inst.FF_3     main|osc_int_inferred_clock     FD1P3BX     Q       opensync_0     1.108       477.997
+tx_mux_inst.FF_0     main|osc_int_inferred_clock     FD1P3DX     Q       tx_ready       1.044       478.061
+rx_mux_inst.FF_0     main|osc_int_inferred_clock     FD1P3DX     Q       rx_ready       1.044       478.061
+tx_mux_inst.FF_2     main|osc_int_inferred_clock     FD1P3DX     Q       opensync_1     1.044       478.709
+rx_mux_inst.FF_2     main|osc_int_inferred_clock     FD1P3DX     Q       opensync_1     1.044       478.709
+tx_mux_inst.FF_1     main|osc_int_inferred_clock     FD1P3DX     Q       opensync_2     0.972       479.692
+rx_mux_inst.FF_1     main|osc_int_inferred_clock     FD1P3DX     Q       opensync_2     0.972       479.692
+===========================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                                Starting                                                                 Required            
+Instance                        Reference                       Type          Pin      Net               Time         Slack  
+                                Clock                                                                                        
+-----------------------------------------------------------------------------------------------------------------------------
+tx_mux_inst.FF_0                main|osc_int_inferred_clock     FD1P3DX       SP       opensync_cken     480.298      477.997
+rx_mux_inst.FF_0                main|osc_int_inferred_clock     FD1P3DX       SP       opensync_cken     480.298      477.997
+tx_mux_inst.FF_1                main|osc_int_inferred_clock     FD1P3DX       SP       opensync_cken     480.298      477.997
+rx_mux_inst.FF_1                main|osc_int_inferred_clock     FD1P3DX       SP       opensync_cken     480.298      477.997
+tx_mux_inst.FF_2                main|osc_int_inferred_clock     FD1P3DX       SP       opensync_cken     480.298      477.997
+rx_mux_inst.FF_2                main|osc_int_inferred_clock     FD1P3DX       SP       opensync_cken     480.298      477.997
+tx_mux_inst.FF_3                main|osc_int_inferred_clock     FD1P3BX       SP       opensync_cken     480.298      477.997
+rx_mux_inst.FF_3                main|osc_int_inferred_clock     FD1P3BX       SP       opensync_cken     480.298      477.997
+tx_mux_inst.Inst2_ECLKSYNCA     main|osc_int_inferred_clock     ECLKSYNCA     STOP     xstop             480.769      478.645
+rx_mux_inst.Inst3_ECLKSYNCA     main|osc_int_inferred_clock     ECLKSYNCA     STOP     xstop             480.769      478.645
+=============================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      480.769
+    - Setup time:                            0.472
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         480.298
+
+    - Propagation time:                      2.301
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     477.997
+
+    Number of logic level(s):                1
+    Starting point:                          tx_mux_inst.FF_3 / Q
+    Ending point:                            tx_mux_inst.FF_0 / SP
+    The start point is clocked by            main|osc_int_inferred_clock [rising] on pin CK
+    The end   point is clocked by            main|osc_int_inferred_clock [rising] on pin CK
+
+Instance / Net                      Pin      Pin               Arrival     No. of    
+Name                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------
+tx_mux_inst.FF_3       FD1P3BX      Q        Out     1.108     1.108       -         
+opensync_0             Net          -        -       -         -           3         
+tx_mux_inst.LUT4_1     ROM16X1A     AD3      In      0.000     1.108       -         
+tx_mux_inst.LUT4_1     ROM16X1A     DO0      Out     1.193     2.301       -         
+opensync_cken          Net          -        -       -         -           4         
+tx_mux_inst.FF_0       FD1P3DX      SP       In      0.000     2.301       -         
+=====================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: rx_mux|sclk_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                    Starting                                                               Arrival            
+Instance            Reference                      Type        Pin     Net                 Time        Slack  
+                    Clock                                                                                     
+--------------------------------------------------------------------------------------------------------------
+sync_mon_valid      rx_mux|sclk_inferred_clock     FD1S3DX     Q       GPIO_c[1]           1.284       997.171
+rx_mux_alignwd      rx_mux|sclk_inferred_clock     FD1S3DX     Q       GPIO_c[5]           1.204       997.251
+sync_delay          rx_mux|sclk_inferred_clock     FD1S3BX     Q       GPIO_c[3]           1.148       997.307
+sync_mon_expect     rx_mux|sclk_inferred_clock     FD1P3DX     Q       sync_mon_expect     1.148       997.307
+sync_pattern[7]     rx_mux|sclk_inferred_clock     FD1P3DX     Q       sync_pattern[7]     1.044       997.411
+mux_synced          rx_mux|sclk_inferred_clock     FD1S3DX     Q       LED_c[0]            1.260       997.652
+sync_mon_out        rx_mux|sclk_inferred_clock     FD1S3DX     Q       GPIO_c[2]           1.108       998.219
+reset_buf           rx_mux|sclk_inferred_clock     FD1S3BX     Q       reset_buf           0.972       998.923
+==============================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                              Starting                                                                 Required            
+Instance                      Reference                      Type        Pin     Net                   Time         Slack  
+                              Clock                                                                                        
+---------------------------------------------------------------------------------------------------------------------------
+mux_synced                    rx_mux|sclk_inferred_clock     FD1S3DX     D       N_36                  1000.089     997.171
+sync_pattern[7]               rx_mux|sclk_inferred_clock     FD1P3DX     SP      N_34                  999.528      997.652
+spi_reg_inst.shift_reg[0]     rx_mux|sclk_inferred_clock     FD1P3DX     SP      rx_mux_out_i_0[4]     999.528      997.796
+spi_reg_inst.shift_reg[1]     rx_mux|sclk_inferred_clock     FD1P3DX     SP      rx_mux_out_i_0[4]     999.528      997.796
+spi_reg_inst.shift_reg[2]     rx_mux|sclk_inferred_clock     FD1P3DX     SP      rx_mux_out_i_0[4]     999.528      997.796
+spi_reg_inst.shift_reg[3]     rx_mux|sclk_inferred_clock     FD1P3DX     SP      rx_mux_out_i_0[4]     999.528      997.796
+spi_reg_inst.shift_reg[4]     rx_mux|sclk_inferred_clock     FD1P3DX     SP      rx_mux_out_i_0[4]     999.528      997.796
+spi_reg_inst.shift_reg[5]     rx_mux|sclk_inferred_clock     FD1P3DX     SP      rx_mux_out_i_0[4]     999.528      997.796
+spi_reg_inst.shift_reg[6]     rx_mux|sclk_inferred_clock     FD1P3DX     SP      rx_mux_out_i_0[4]     999.528      997.796
+spi_reg_inst.shift_reg[7]     rx_mux|sclk_inferred_clock     FD1P3DX     SP      rx_mux_out_i_0[4]     999.528      997.796
+===========================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1000.089
+
+    - Propagation time:                      2.917
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 997.171
+
+    Number of logic level(s):                2
+    Starting point:                          sync_mon_valid / Q
+    Ending point:                            mux_synced / D
+    The start point is clocked by            rx_mux|sclk_inferred_clock [rising] on pin CK
+    The end   point is clocked by            rx_mux|sclk_inferred_clock [rising] on pin CK
+
+Instance / Net                                    Pin      Pin               Arrival     No. of    
+Name                                 Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------
+sync_mon_valid                       FD1S3DX      Q        Out     1.284     1.284       -         
+GPIO_c[1]                            Net          -        -       -         -           21        
+mux_sync_func\.sync_delay_4_0_o2     ORCALUT4     A        In      0.000     1.284       -         
+mux_sync_func\.sync_delay_4_0_o2     ORCALUT4     Z        Out     1.017     2.301       -         
+N_43                                 Net          -        -       -         -           1         
+mux_synced_RNO                       ORCALUT4     B        In      0.000     2.301       -         
+mux_synced_RNO                       ORCALUT4     Z        Out     0.617     2.917       -         
+N_36                                 Net          -        -       -         -           1         
+mux_synced                           FD1S3DX      D        In      0.000     2.917       -         
+===================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: tx_mux|sclk_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                        Starting                                                                   Arrival            
+Instance                Reference                      Type        Pin     Net                     Time        Slack  
+                        Clock                                                                                         
+----------------------------------------------------------------------------------------------------------------------
+tx_mux_d[0]             tx_mux|sclk_inferred_clock     FD1S3DX     Q       tx_mux_d[0]             0.972       998.011
+tx_mux_d_tri_enable     tx_mux|sclk_inferred_clock     FD1S3BX     Q       tx_mux_d_tri_enable     0.972       998.011
+reset_tx_buf            tx_mux|sclk_inferred_clock     FD1S3BX     Q       reset_tx_buf            0.972       998.923
+tx_mux_d[1]             tx_mux|sclk_inferred_clock     FD1S3DX     Q       tx_mux_d[1]             0.972       999.028
+tx_mux_d[7]             tx_mux|sclk_inferred_clock     FD1S3DX     Q       tx_mux_d[7]             0.972       999.028
+======================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                               Starting                                                                 Required            
+Instance                       Reference                      Type        Pin     Net                   Time         Slack  
+                               Clock                                                                                        
+----------------------------------------------------------------------------------------------------------------------------
+tx_mux_inst.Inst5_ODDRX4B0     tx_mux|sclk_inferred_clock     ODDRX4B     D0      tx_mux_d_tri_5[0]     1000.000     998.011
+reset_tx                       tx_mux|sclk_inferred_clock     FD1S3BX     D       reset_tx_buf          999.894      998.923
+tx_mux_inst.Inst5_ODDRX4B0     tx_mux|sclk_inferred_clock     ODDRX4B     D1      tx_mux_d[1]           1000.000     999.028
+tx_mux_inst.Inst5_ODDRX4B0     tx_mux|sclk_inferred_clock     ODDRX4B     D7      tx_mux_d[7]           1000.000     999.028
+============================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         1000.000
+
+    - Propagation time:                      1.989
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 998.011
+
+    Number of logic level(s):                1
+    Starting point:                          tx_mux_d[0] / Q
+    Ending point:                            tx_mux_inst.Inst5_ODDRX4B0 / D0
+    The start point is clocked by            tx_mux|sclk_inferred_clock [rising] on pin CK
+    The end   point is clocked by            System [rising]
+
+Instance / Net                                  Pin      Pin               Arrival     No. of    
+Name                               Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------
+tx_mux_d[0]                        FD1S3DX      Q        Out     0.972     0.972       -         
+tx_mux_d[0]                        Net          -        -       -         -           1         
+tx_mux_inst.Inst5_ODDRX4B0_RNO     ORCALUT4     A        In      0.000     0.972       -         
+tx_mux_inst.Inst5_ODDRX4B0_RNO     ORCALUT4     Z        Out     1.017     1.989       -         
+tx_mux_d_tri_5[0]                  Net          -        -       -         -           1         
+tx_mux_inst.Inst5_ODDRX4B0         ODDRX4B      D0       In      0.000     1.989       -         
+=================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                               Starting                                             Arrival            
+Instance                       Reference     Type        Pin      Net               Time        Slack  
+                               Clock                                                                   
+-------------------------------------------------------------------------------------------------------
+pll_mux_inst.PLLInst_0         System        EHXPLLJ     LOCK     LED_c[2]          0.000       479.105
+rx_mux_inst.Inst5_IDDRX4B0     System        IDDRX4B     Q2       GPIO_c[8]         0.000       997.302
+rx_mux_inst.Inst5_IDDRX4B0     System        IDDRX4B     Q3       GPIO_c[9]         0.000       997.302
+rx_mux_inst.Inst5_IDDRX4B0     System        IDDRX4B     Q4       GPIO_c[10]        0.000       997.302
+rx_mux_inst.Inst5_IDDRX4B0     System        IDDRX4B     Q5       GPIO_c[11]        0.000       997.302
+rx_mux_inst.Inst5_IDDRX4B0     System        IDDRX4B     Q0       GPIO_c[6]         0.000       998.319
+rx_mux_inst.Inst5_IDDRX4B0     System        IDDRX4B     Q1       GPIO_c[7]         0.000       998.319
+rx_mux_inst.Inst5_IDDRX4B0     System        IDDRX4B     Q6       GPIO_c[12]        0.000       998.319
+rx_mux_inst.Inst5_IDDRX4B0     System        IDDRX4B     Q7       GPIO_c[13]        0.000       998.455
+spi_reg_inst.spi_miso          System        FD1P3DX     Q        spi_miso_fpga     0.972       998.500
+=======================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                            Starting                                                        Required            
+Instance                    Reference     Type        Pin     Net                           Time         Slack  
+                            Clock                                                                               
+----------------------------------------------------------------------------------------------------------------
+tx_mux_inst.FF_0            System        FD1P3DX     SP      opensync_cken                 480.298      479.105
+tx_mux_inst.FF_1            System        FD1P3DX     SP      opensync_cken                 480.298      479.105
+tx_mux_inst.FF_2            System        FD1P3DX     SP      opensync_cken                 480.298      479.105
+tx_mux_inst.FF_3            System        FD1P3BX     SP      opensync_cken                 480.298      479.105
+mux_synced                  System        FD1S3DX     D       N_36                          1000.089     997.302
+rx_mux_alignwd              System        FD1S3DX     D       N_18_i                        1000.089     997.302
+sync_pattern[7]             System        FD1P3DX     D       sync_pattern_RNO[7]           1000.089     997.302
+tx_mux_d[0]                 System        FD1S3DX     D       un1_spi_miso_fpga_iv_0[7]     1000.089     997.438
+tx_mux_d_tri_enable         System        FD1S3BX     D       un1_mux_synced_i              1000.089     998.455
+spi_reg_inst.reg_out[0]     System        FD1S1AY     D       shift_reg[0]                  999.894      998.851
+================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      480.769
+    - Setup time:                            0.472
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         480.298
+
+    - Propagation time:                      1.193
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 479.105
+
+    Number of logic level(s):                1
+    Starting point:                          pll_mux_inst.PLLInst_0 / LOCK
+    Ending point:                            tx_mux_inst.FF_0 / SP
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            main|osc_int_inferred_clock [rising] on pin CK
+
+Instance / Net                          Pin      Pin               Arrival     No. of    
+Name                       Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------
+pll_mux_inst.PLLInst_0     EHXPLLJ      LOCK     Out     0.000     0.000       -         
+LED_c[2]                   Net          -        -       -         -           4         
+tx_mux_inst.LUT4_1         ROM16X1A     AD1      In      0.000     0.000       -         
+tx_mux_inst.LUT4_1         ROM16X1A     DO0      Out     1.193     1.193       -         
+opensync_cken              Net          -        -       -         -           4         
+tx_mux_inst.FF_0           FD1P3DX      SP       In      0.000     1.193       -         
+=========================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+
+Finished final timing analysis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 142MB peak: 143MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lcmxo2_2000hc-4
+
+Register bits: 40 of 2112 (2%)
+Latch bits:      11
+PIC Latch:       0
+I/O cells:       54
+
+
+Details:
+BB:             2
+FD1P3BX:        2
+FD1P3DX:        25
+FD1S1AY:        11
+FD1S3BX:        6
+FD1S3DX:        7
+GSR:            1
+IB:             6
+INV:            5
+OB:             40
+OBZ:            6
+ORCALUT4:       34
+OSCH:           1
+PUR:            1
+ROM16X1A:       4
+VHI:            4
+VLO:            4
+false:          1
+true:           1
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 53MB peak: 143MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Mon Nov 09 18:04:07 2015
+
+###########################################################]
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>
