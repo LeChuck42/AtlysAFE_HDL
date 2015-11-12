@@ -350,12 +350,12 @@ begin
 	SIO_CTSn <= 'Z';
 	SIO_DSRn <= 'Z';
 	SIO_DCDn <= 'Z';
-	GPIO <= rx_mux_q(7 downto 0) & rx_mux_alignwd & mux_synced & sync_delay & sync_mon_out & sync_mon_valid & "0";
+	GPIO <= rx_mux_q(7 downto 0) & rx_mux_alignwd & mux_synced & sync_delay & sync_mon_out & sync_mon_valid & tx_mux_lock_chk;
 	--GPIO <= rx_mux_sclk & tx_mux_lock_chk & osc_int & reset_async & rx_mux_init & rx_mux_rx_ready & "0"&  rx_mux_alignwd & mux_synced & sync_delay & sync_mon_out & sync_mon_valid & spi_miso & tx_mux_lock_chk;
-	LED(0) <= mux_synced;
-	LED(1) <= spi_reg(13);
+	LED(0) <= sync_mon_valid;
+	LED(1) <= mux_synced;
 	LED(2) <= tx_mux_lock_chk;
-	LED(3) <= spi_reg(15);
+	LED(3) <= not spi_oe;
 end architecture rtl;
 		
 		

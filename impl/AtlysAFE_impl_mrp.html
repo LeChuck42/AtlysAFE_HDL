@@ -22,19 +22,19 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-2000HCTQFP100
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.6.0.83.4
-Mapped on:  11/09/15  18:04:09
+Mapped on:  11/09/15  18:18:21
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:     51 out of  2352 (2%)
-      PFU registers:           51 out of  2112 (2%)
+   Number of registers:     49 out of  2352 (2%)
+      PFU registers:           49 out of  2112 (2%)
       PIO registers:            0 out of   240 (0%)
-   Number of SLICEs:        29 out of  1056 (3%)
-      SLICEs as Logic/ROM:     29 out of  1056 (3%)
+   Number of SLICEs:        28 out of  1056 (3%)
+      SLICEs as Logic/ROM:     28 out of  1056 (3%)
       SLICEs as RAM:            0 out of   792 (0%)
       SLICEs as Carry:          0 out of  1056 (0%)
-   Number of LUT4s:         43 out of  2112 (2%)
-      Number used as logic LUTs:         43
+   Number of LUT4s:         44 out of  2112 (2%)
+      Number used as logic LUTs:         44
       Number used as distributed RAM:     0
       Number used as ripple logic:        0
       Number used as shift registers:     0
@@ -85,9 +85,9 @@ Mapped on:  11/09/15  18:04:09
      rx_mux_inst/Inst4_CLKDIVC )
      Net DAC_SPI_CS_i_0: 1 loads, 1 rising, 0 falling (Driver: DAC_SPI_CLK_RNO )
      
-     Net rx_mux_out_i_0[4]: 5 loads, 0 rising, 5 falling (Driver:
+     Net rx_mux_out_i_0[4]: 4 loads, 0 rising, 4 falling (Driver:
      rx_mux_inst/Inst5_IDDRX4B0_RNIMLFH )
-     Net N_23_i: 9 loads, 9 rising, 0 falling (Driver:
+     Net N_24_i: 9 loads, 9 rising, 0 falling (Driver:
      rx_mux_inst/Inst5_IDDRX4B0_RNIMLFH_1 )
      Net tx_mux_inst/eclkd: 2 loads, 2 rising, 0 falling (Driver:
      tx_mux_inst/Inst2_ECLKSYNCA )
@@ -99,11 +99,11 @@ Mapped on:  11/09/15  18:04:09
      rx_mux_inst/Inst3_ECLKSYNCA )
      Net MUX_CLK_c: 1 loads, 1 rising, 0 falling (Driver: PIO MUX_CLK )
    Number of Clock Enables:  5
-     Net LED_c[0]: 1 loads, 1 LSLICEs
+     Net LED_c[1]: 1 loads, 1 LSLICEs
      Net rx_mux_out_i_0[4]: 9 loads, 9 LSLICEs
      Net tx_mux_inst/opensync_cken: 2 loads, 2 LSLICEs
      Net rx_mux_inst/rx_ready: 2 loads, 2 LSLICEs
-     Net N_34: 1 loads, 1 LSLICEs
+     Net N_35: 1 loads, 1 LSLICEs
    Number of local set/reset loads for net reset merged into GSR:  24
    Number of LSRs:  6
      Net reset_sync_proc.un2_reset_async: 2 loads, 2 LSLICEs
@@ -114,13 +114,13 @@ Mapped on:  11/09/15  18:04:09
      Net reset_tx: 3 loads, 3 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net GPIO_c[1]: 21 loads
-     Net LED_c[0]: 15 loads
+     Net LED_c[0]: 23 loads
+     Net LED_c[1]: 15 loads
+     Net LED_c[2]: 8 loads
      Net GPIO_c[5]: 7 loads
      Net GPIO_c[7]: 7 loads
      Net GPIO_c[8]: 7 loads
      Net GPIO_c[9]: 7 loads
-     Net LED_c[2]: 7 loads
      Net GPIO_c[12]: 6 loads
      Net GPIO_c[13]: 6 loads
      Net GPIO_c[11]: 5 loads
@@ -297,7 +297,7 @@ Signal rx_mux_inst/cdiv1 undriven or does not drive anything - clipped.
 Signal tx_mux_inst/cdiv1 undriven or does not drive anything - clipped.
 Signal OSCInst0_SEDSTDBY undriven or does not drive anything - clipped.
 Block rx_mux_inst/LUT4_1 was optimized away.
-Block spi_reg_inst/reg_out_13_.GN was optimized away.
+Block spi_reg_inst/reg_out_0_.GN was optimized away.
 Block pll_mux_inst/GND was optimized away.
 Block rx_mux_inst/VCC was optimized away.
 Block rx_mux_inst/GND was optimized away.
